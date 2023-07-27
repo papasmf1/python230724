@@ -4,6 +4,7 @@ import requests
 #크롤링
 from bs4 import BeautifulSoup
 
+
 url = "https://www.daangn.com/"
 response = requests.get(url)
 soup = BeautifulSoup(response.text, "html.parser")
@@ -22,6 +23,8 @@ for post in posts:
     f.write(f"{title}, {price}, {addr}\n")
 
 f.close() 
+
+
 # <div class="card-desc">
 #       <h2 class="card-title">먹태깡 60봉</h2>
 #       <div class="card-price ">
